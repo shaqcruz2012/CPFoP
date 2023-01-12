@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+
+}
+
+img {
+    display: block;
+    height: 300px;
+    margin: 0 auto;
+}
+
+ul {
+    width: 100px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    text-align: center;
+    width: 94px;
+    height: 49px;
+    border: 1px solid black;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr repeat(4, 50px);
+    grid-template-areas: 
+        "display display display display"
+        "one one one clear"
+        "two two two zero"
+        "three three three null"
+        "add sub mul div"
+}
+.display {
+    grid-area: display;
+    text-align: right;
+}
+.grid-container {
+    grid-area: calculator;
+}
+.grid-item {
+    text-align: center
+}
